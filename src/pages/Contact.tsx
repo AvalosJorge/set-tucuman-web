@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "./contact.css";
+import "./Contact.css";
 import contactBg from "../assets/about.jpg";
 import securityImg from "../assets/security.jpg";
 
