@@ -8,6 +8,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
+      aria-label="Menú principal"
       className={`navbar navbar-expand-lg navbar-dark fixed-top custom-nav ${
         expanded ? "expanded" : ""
       }`}
@@ -15,17 +16,21 @@ const Navbar: React.FC = () => {
       <div className="container-fluid px-4">
         {/* 🔹 Logo como NavLink para navegación SPA */}
         <div className="navbar-brand d-flex align-items-center">
-          <NavLink to="/" className="logo-link" onClick={() => setExpanded(false)}>
+          <NavLink
+            to="/"
+            className="logo-link"
+            onClick={() => setExpanded(false)}
+          >
             <img src={logo} alt="Logo" className="nav-logo me-2" />
           </NavLink>
-          <span className="brand-text">Seguridad Electronica Tucumán</span>
+          <span className="brand-text" translate="no">
+            Seguridad Electronica Tucumán
+          </span>
         </div>
 
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
           onClick={() => setExpanded(!expanded)}
           aria-controls="navbarNav"
           aria-expanded={expanded}
@@ -45,7 +50,9 @@ const Navbar: React.FC = () => {
               <NavLink
                 to="/"
                 end
-                className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={() => setExpanded(false)}
               >
                 Inicio
@@ -55,7 +62,9 @@ const Navbar: React.FC = () => {
             <li className="nav-item">
               <NavLink
                 to="/about"
-                className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={() => setExpanded(false)}
               >
                 Nosotros
@@ -65,7 +74,9 @@ const Navbar: React.FC = () => {
             <li className="nav-item">
               <NavLink
                 to="/services"
-                className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={() => setExpanded(false)}
               >
                 Servicios
@@ -75,7 +86,9 @@ const Navbar: React.FC = () => {
             <li className="nav-item">
               <NavLink
                 to="/contact"
-                className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={() => setExpanded(false)}
               >
                 Contacto
