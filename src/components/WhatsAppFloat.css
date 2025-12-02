@@ -1,0 +1,66 @@
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px; /* justo arriba del footer */
+  right: 25px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Botón principal */
+.whatsapp-btn {
+  background-color: #0d9488; /* verde petróleo */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #0b7d74;
+  transform: scale(1.08);
+}
+
+/* Menú de números */
+.whatsapp-menu {
+  background-color: #1e293b; /* azul grisáceo oscuro */
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp 0.3s ease;
+}
+
+.whatsapp-menu a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 4px 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-menu a:hover {
+  color: #0d9488;
+  transform: translateX(4px);
+}
+
+/* Animación */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

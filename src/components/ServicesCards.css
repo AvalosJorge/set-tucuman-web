@@ -1,0 +1,104 @@
+.services-section {
+  background-color: #f8f9fa;
+  padding-bottom: 0rem;
+}
+
+/* 🔹 TITULOS PRINCIPALES CON LÍNEA DECORATIVA */
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-size: 1.9rem;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #c00000; /* rojo de tu marca */
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.section-title:hover::after {
+  width: 120px;
+}
+
+/* 🔹 CARDS */
+.service-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* 🔹 Fondo degradado en la descripción */
+.card-body {
+  background: linear-gradient(135deg, #009879, #006d5b);
+  color: white;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* 🔹 Responsivo */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .service-card img {
+    height: 180px;
+  }
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid #009879; /* borde verde petróleo */
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #009879;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}

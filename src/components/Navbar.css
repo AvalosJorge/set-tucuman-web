@@ -1,0 +1,172 @@
+/* 🔹 Navbar elegante con degradado sutil y sombra */
+.custom-nav {
+  background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+  backdrop-filter: blur(8px);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔹 Marca (logo + texto) */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none !important;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+.nav-logo {
+  height: 45px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Texto de la marca (no clickeable) */
+.brand-text {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #0d9488; /* verde petróleo */
+  text-decoration: none !important;
+  user-select: none;
+}
+
+
+/* 🔹 Estilo de los enlaces del menú */
+.navbar-nav .nav-link {
+  color: #0d9488 !important; /* mismo verde petróleo */
+  font-weight: 600;
+  margin-left: 1rem;
+  transition: color 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+}
+
+/* Hover con fondo claro */
+.navbar-nav .nav-link:hover {
+  color: #000000;
+  background: rgba(255, 255, 255, 0.85);
+  opacity: 1;
+}
+
+
+/* 🔹 Efecto opacidad en hover del grupo */
+.navbar-nav:hover .nav-link {
+  opacity: 0.4;
+}
+.navbar-nav:hover .nav-link:hover {
+  opacity: 1;
+}
+
+/* 🔹 Modo responsive (menú hamburguesa) */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(15, 23, 42, 0.97);
+    position: relative;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .navbar-collapse.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* 🔸 Animaciones suaves para abrir/cerrar */
+  .fade-in {
+    animation: fadeIn 0.4s ease forwards;
+  }
+  .fade-out {
+    animation: fadeOut 0.3s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+.custom-nav.expanded {
+  margin-bottom: 12rem; /* 🔸 empuja visualmente el carousel sin arruinar el responsive */
+  transition: margin 0.4s ease;
+}
+
+
+  .nav-logo {
+    height: 40px;
+  }
+}
+
+:root {
+  --navbar-height: 7px; /* ← ajustá este valor si cambiaste el alto del nav */
+}
+
+
+@media (max-width: 992px) {
+  .navbar-collapse.show {
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.97);
+    border-radius: 0 0 10px 10px;
+    z-index: 999;
+  }
+}
+
+/* 🔹 Efecto subrayado animado en los links del navbar */
+.navbar-nav .nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea que aparece desde el centro hacia los lados */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #0d9488; /* verde petróleo */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Al pasar el mouse o activo */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 80%;
+}

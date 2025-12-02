@@ -1,0 +1,69 @@
+/* 🔹 Carousel ajustado justo debajo del navbar */
+.custom-carousel {
+  margin-top: calc(var(--navbar-height, 80px));
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Imágenes fluidas que se ajustan sin recortarse mal */
+.custom-carousel .carousel-inner img {
+  width: 100%;
+  height: auto;
+  max-height: 75vh; /* controla el alto máximo del carrusel */
+  aspect-ratio: 16/9; /* mantiene proporción visual elegante */
+  object-fit: cover; /* rellena sin deformar */
+  object-position: center;
+  transition: transform 1.2s ease;
+}
+
+/* 🔹 Hover con efecto suave */
+.custom-carousel .carousel-inner img:hover {
+  transform: scale(1.03);
+}
+
+/* 🔹 Overlay tenue */
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+  z-index: 0;
+}
+
+.carousel-item img {
+  position: relative;
+  z-index: 0;
+}
+
+/* 🔹 Transición tipo fade con desplazamiento leve */
+.carousel-fade .carousel-item {
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active {
+  display: block;
+}
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+  opacity: 0;
+  transform: translateX(20%);
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .custom-carousel {
+    margin-top: 65px;
+  }
+
+  .custom-carousel .carousel-inner img {
+    aspect-ratio: 16/10;
+    max-height: 50vh;
+  }
+}

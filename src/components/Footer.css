@@ -1,0 +1,89 @@
+.footer {
+  background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+  color: #e5e7eb;
+  text-align: center;
+  padding: 0.5rem 1rem 1rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 0.5rem;
+}
+
+.footer-column h5 {
+  color: #0d9488; /* verde petróleo */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.footer-column a {
+  display: block;
+  color: #e5e7eb;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #0d9488;
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+/* 🔹 Columna de WhatsApp más ancha */
+.whatsapp-column {
+  flex: 1 1 300px;
+  max-width: 320px;
+}
+
+/* 🔸 Responsive optimizado */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+  }
+
+  .footer-column {
+    margin: 0.5rem 0;
+    max-width: 280px;
+  }
+
+  .whatsapp-column {
+    max-width: 320px; /* un poco más ancha también en móvil */
+  }
+
+  .footer-column h5 {
+    font-size: 1.3rem;
+  }
+
+  .footer-column a {
+    margin: 0.2rem 0;
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+    padding-top: 0.4rem;
+  }
+}

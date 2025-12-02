@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #f8f9fa;
+  padding-bottom: 50px; /* 🟢 espacio ideal para footer fijo */
+}
+
+/* 📱 Tablets */
+@media (max-width: 992px) {
+  html,
+  body {
+    padding-bottom: 130px; /* un poco más para evitar solapamiento */
+  }
+}
+
+/* 📱 Celulares */
+@media (max-width: 576px) {
+  html,
+  body {
+    padding-bottom: 160px; /* suficiente espacio, sin excesos */
+  }
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto !important;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegura que el footer quede al final sin espacio sobrante */
+footer {
+  margin-top: auto;
+}
