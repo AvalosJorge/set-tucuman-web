@@ -12,11 +12,11 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-column">
+        <div className="footer-column" translate = "no">
           <h5>
             <FontAwesomeIcon icon={faShieldAlt} className="icon" /> S.E.T
           </h5>
-          <p><b>Seguridad Electronica Total</b></p>
+          <p><b>Seguridad Electronica Tucumán</b></p>
         </div>
 
         <div className="footer-column">

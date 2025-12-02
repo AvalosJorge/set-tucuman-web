@@ -27,7 +27,7 @@ const About: React.FC = () => {
       <div className="quienes-somos container py-5">
         <h2 className="section-title text-center mb-4">Quiénes Somos</h2>
         <p className="text-center quienes-text">
-          <b>Seguridad Electrónica Total</b> es una empresa dedicada a brindar soluciones
+          <b>Seguridad Electrónica Tucumán</b> es una empresa dedicada a brindar soluciones
           integrales en sistemas de seguridad, redes y tecnología para hogares,
           empresas y campos.
         </p>

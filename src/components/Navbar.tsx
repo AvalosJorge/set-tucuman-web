@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
           <NavLink to="/" className="logo-link" onClick={() => setExpanded(false)}>
             <img src={logo} alt="Logo" className="nav-logo me-2" />
           </NavLink>
-          <span className="brand-text">Seguridad Electronica Total</span>
+          <span className="brand-text">Seguridad Electronica Tucumán</span>
         </div>
 
         <button
