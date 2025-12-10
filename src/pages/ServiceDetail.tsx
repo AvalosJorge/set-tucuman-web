@@ -21,7 +21,7 @@ const services = [
 
   { id: 5, title: "Sistemas Solares", desc: "Diseño e instalación de sistemas solares fotovoltaicos para ahorro energético. Incluye cálculo de consumo, paneles solares, reguladores, inversores y bancos de baterías para uso domiciliario o comercial.", img: img55 },
 
-  { id: 6, title: "Instalación Starlink", desc: "Montaje, alineación y configuración de antenas Starlink para obtener internet satelital de alta velocidad. Optimización del rendimiento, fijaciones seguras y distribución del servicio dentro del domicilio..", img: img6 },
+  { id: 6, title: "Instalación Starlink", desc: "Montaje, alineación y configuración de antenas Starlink para obtener internet satelital de alta velocidad. Optimización del rendimiento, fijaciones seguras y distribución del servicio dentro del domicilio.", img: img6 },
 
   { id: 7, title: "Enlaces Punto a Punto", desc: "Implementación de enlaces inalámbricos de largo alcance para unir dos o más ubicaciones. Ideal para llevar internet o cámaras entre casas, galpones, fincas o empresas, con equipos Ubiquiti.", img: img7 },
 
