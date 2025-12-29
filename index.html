@@ -1,14 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-AR">
   <head>
+    <!-- Básico -->
     <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/favicon-16x16.png">
-    <link rel="manifest" href="/src/assets/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seguridad Electronica Tucumán</title>
+
+    <!-- SEO -->
+    <title>Seguridad Electrónica en Tucumán | S.E.T</title>
+    <meta
+      name="description"
+      content="S.E.T Seguridad Electrónica Total. Instalación de cámaras de seguridad, alarmas, control de acceso y redes en Tucumán."
+    />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- SEO Local (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Seguridad Electrónica Total",
+        "email": "set.tucuman@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tucumán",
+          "addressCountry": "AR"
+        }
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
