@@ -1,3 +1,4 @@
+/* ================= FOOTER ================= */
 .footer {
   background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
   color: #e5e7eb;
@@ -9,21 +10,23 @@
   margin-top: auto;
 }
 
+/* ---------------- CONTENEDOR ---------------- */
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
+/* ---------------- COLUMNAS ---------------- */
 .footer-column {
-  flex: 1 1 200px;
+  flex: 1 1 200px;          /* desktop */
   margin: 0.5rem;
 }
 
 .footer-column h5 {
-  color: #0d9488; /* verde petróleo */
+  color: #0d9488;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
@@ -42,48 +45,68 @@
   transform: translateX(4px);
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 0.5rem;
-  font-size: 1rem;
-  color: #9ca3af;
-}
-
-/* 🔹 Columna de WhatsApp más ancha */
+/* ---------------- WHATSAPP ---------------- */
 .whatsapp-column {
   flex: 1 1 300px;
   max-width: 320px;
 }
 
-/* 🔸 Responsive optimizado */
+
+.whatsapp-column a:hover {
+  transform: scale(1.03);
+}
+
+
+/* ---------------- FOOTER BOTTOM ---------------- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
   .footer-content {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.6rem;
+    align-items: flex-start;   /* evita stretch */
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
   }
 
   .footer-column {
-    margin: 0.5rem 0;
-    max-width: 280px;
-  }
-
-  .whatsapp-column {
-    max-width: 320px; /* un poco más ancha también en móvil */
+    flex: none;                /* 🔥 CLAVE: elimina 200px de alto */
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-inline: auto;       /* centra columna */
+    text-align: center;
   }
 
   .footer-column h5 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
   }
 
   .footer-column a {
-    margin: 0.2rem 0;
-    font-size: 1.1rem;
+    margin: 0.15rem 0;
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-column {
+    max-width: 320px;
+  }
+
+  .footer-column:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 0.4rem;
   }
 
   .footer-bottom {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding-top: 0.4rem;
   }
 }
