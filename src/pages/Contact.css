@@ -114,3 +114,36 @@
 }
 
 
+/* ---------------- STATUS MESSAGE ---------------- */
+.status-box {
+  margin-bottom: 15px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  animation: fadeSlideDown 0.4s ease;
+}
+
+.status-box.success {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #065f46;
+}
+
+.status-box.error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #7f1d1d;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -10,6 +10,9 @@ const Contact: React.FC = () => {
   const [errors, setErrors] = useState<any>({});
   const [sending, setSending] = useState(false);
 
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
+  const [statusMsg, setStatusMsg] = useState("");
+
   const validate = () => {
     const formData = new FormData(form.current!);
     const nombre = formData.get("nombre")?.toString().trim() ?? "";
@@ -54,17 +57,39 @@ const Contact: React.FC = () => {
         form.current,
         "vwJLnbD7Xo1YdnmGO"
       )
-      .then(
-        () => {
-          alert("✅ Mensaje enviado correctamente.");
-          form.current?.reset();
-          setErrors({});
-        },
-        (error) => {
-          console.error("Error al enviar:", error);
-          alert("❌ Ocurrió un error al enviar el mensaje.");
-        }
-      )
+.then(
+  () => {
+    setStatus("success");
+    setStatusMsg(
+      "Mensaje enviado correctamente. Nos pondremos en contacto a la brevedad."
+    );
+
+    form.current?.reset();
+    setErrors({});
+
+    // ⏱ Ocultar mensaje luego de 4 segundos
+    setTimeout(() => {
+      setStatus(null);
+      setStatusMsg("");
+    }, 4000);
+  },
+  (error) => {
+    console.error("Error al enviar:", error);
+
+    setStatus("error");
+    setStatusMsg(
+      "Ocurrió un error al enviar el mensaje. Intentalo nuevamente."
+    );
+
+    // ⏱ Ocultar mensaje luego de 4 segundos
+    setTimeout(() => {
+      setStatus(null);
+      setStatusMsg("");
+    }, 4000);
+  }
+)
+
+
       .finally(() => setSending(false));
   };
 
@@ -79,41 +104,62 @@ const Contact: React.FC = () => {
         }}
       >
         <h1 className="hero-title">Contacto</h1>
-        <p className="hero-subtitle">Envíanos tu consulta o pedido de presupuesto</p>
+        <p className="hero-subtitle">
+          Envíanos tu consulta o pedido de presupuesto
+        </p>
       </div>
 
       <div className="container contact-content py-5">
         <div className="row align-items-center">
           <div className="col-md-6 mb-4 mb-md-0">
-            <form ref={form} onSubmit={sendEmail} className="contact-form glass">
+
+            {status && (
+              <div className={`status-box ${status}`}>{statusMsg}</div>
+            )}
+
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="contact-form glass"
+            >
               <div className="mb-3 field-group">
                 <label>Nombre</label>
                 <input type="text" name="nombre" />
-                {errors.nombre && <span className="error">{errors.nombre}</span>}
+                {errors.nombre && (
+                  <span className="error">{errors.nombre}</span>
+                )}
               </div>
 
               <div className="mb-3 field-group">
                 <label>Apellido</label>
                 <input type="text" name="apellido" />
-                {errors.apellido && <span className="error">{errors.apellido}</span>}
+                {errors.apellido && (
+                  <span className="error">{errors.apellido}</span>
+                )}
               </div>
 
               <div className="mb-3 field-group">
                 <label>Teléfono</label>
                 <input type="text" name="telefono" />
-                {errors.telefono && <span className="error">{errors.telefono}</span>}
+                {errors.telefono && (
+                  <span className="error">{errors.telefono}</span>
+                )}
               </div>
 
               <div className="mb-3 field-group">
                 <label>Email</label>
                 <input type="email" name="correo" />
-                {errors.correo && <span className="error">{errors.correo}</span>}
+                {errors.correo && (
+                  <span className="error">{errors.correo}</span>
+                )}
               </div>
 
               <div className="mb-3 field-group">
                 <label>Mensaje</label>
                 <textarea name="mensaje" rows={4} />
-                {errors.mensaje && <span className="error">{errors.mensaje}</span>}
+                {errors.mensaje && (
+                  <span className="error">{errors.mensaje}</span>
+                )}
               </div>
 
               <button type="submit" className="btn-enviar" disabled={sending}>
