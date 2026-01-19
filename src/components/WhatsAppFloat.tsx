@@ -12,6 +12,7 @@ const WhatsAppFloat: React.FC = () => {
     >
       <button className="whatsapp-btn">
         <FontAwesomeIcon icon={faWhatsapp} />
+        <span className="tooltip"><b>Contactanos</b></span>
       </button>
     </a>
   );

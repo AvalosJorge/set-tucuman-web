@@ -27,3 +27,30 @@
   background-color: #0b7d74;
   transform: scale(1.08);
 }
+
+.whatsapp-btn {
+  position: relative; /* clave para el tooltip */
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1e293b;
+  color: #e5e7eb;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Mostrar tooltip al hover */
+.whatsapp-btn:hover .tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-4px);
+}
