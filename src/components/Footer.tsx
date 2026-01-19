@@ -31,25 +31,11 @@ const Footer: React.FC = () => {
             <FontAwesomeIcon icon={faWhatsapp} className="icon" /> WhatsApp
           </h5>
           <a
-            href="https://wa.me/543815265876"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Kreisel Sebastian <b>|</b> +54 381 526 5876
-          </a>
-          <a
-            href="https://wa.me/543814649027"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Avalos Jorge <b>|</b> +54 381 464 9027
-          </a>
-          <a
             href="https://wa.me/543816950652"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Toledo Augusto <b>|</b> +54 381 695 0652
+            S.E.T <b>|</b> +54 381 695 0652
           </a>
         </div>
 
