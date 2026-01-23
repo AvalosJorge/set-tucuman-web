@@ -11,7 +11,7 @@ import img7 from "../assets/servicio7.jpg";
 import img8 from "../assets/servicio8.jpg";
 
 const services = [
-  { id: 1, title: "Cámaras de Seguridad", desc: "Instalación y monitoreo de cámaras IP y analógicas, con grabación continua y acceso remoto desde celular o PC.", img: img1 },
+  { id: 1, title: "Cámaras de Seguridad", desc: "Instalación y monitoreo de cámaras IP y analógicas, con grabación continua y acceso remoto desde celular o PC. Desarrollamos proyectos de videovigilancia a medida para edificios, barrios privados, countrys, hogares y establecimientos rurales, e incluimos servicios de mantenimiento preventivo y correctivo, asegurando el correcto funcionamiento del sistema a lo largo del tiempo.", img: img1 },
 
   { id: 2, title: "Redes Inalámbricas y Cableadas", desc: "Diseño, instalación y optimización de redes WiFi y cableadas. Incluye tendido estructurado, configuración de routers, repetidores y puntos de acceso, garantizando una conexión estable, segura y de alta velocidad.", img: img2 },
 
